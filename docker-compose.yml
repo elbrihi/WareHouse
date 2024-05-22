@@ -57,12 +57,12 @@ services:
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
-    #node:
-        #build:
-            #context: ./adminsaid
-            #dockerfile: Dockerfile
-        #ports:
-            #- '4200:4200'
-        #volumes:
-            #- ./adminsaid/src:/frontend/src
+    node:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        ports:
+            - '4200:4200'
+        volumes:
+            - ./frontend:/frontend
  
