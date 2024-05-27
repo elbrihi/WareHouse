@@ -1,0 +1,4 @@
+# create this file if you need to configure anything
+maker:
+    root_namespace: 'ChickenWarehouse\UserBundle\Domain'
+    #root_namespace: 'App'
