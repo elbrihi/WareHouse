@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Credentials } from '../user/credentials.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const PROTOCOL = 'http://localhost:8181/api/';
@@ -25,13 +24,12 @@ export class AuthService {
   login(credentials: any) {
     
 
-      let url  = this.baseUrl+"auth/login";
       const headers = new HttpHeaders({
         'Content-Type': 'application/ld+json'
       });
       this.http.post<any>(this.baseUrl+"user/auth-token ", credentials, { headers}).subscribe(response =>{
-        console.log(response.token);
-        console.log(response.apiToken);
+        //console.log(response.token);
+        //console.log(response.apiToken);
         localStorage.setItem('token', response.apiToken);
         this.loggedIn.next(true);
         this.router.navigate(['/dashboard']);

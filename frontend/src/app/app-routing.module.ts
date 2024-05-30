@@ -1,6 +1,5 @@
 import { Routes,RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { DashboardComponent } from './modules/dashboard/components/dashboard.component';
 import { DashboardLayoutComponent } from './modules/dashboard/containers/dashboard-layout/dashboard-layout.component';
 import { LoginComponent } from './modules/auth/components/login/login.component';
 import { AuthGuard } from './core/guards/auth.guard';
@@ -25,7 +24,7 @@ export const routes: Routes = [
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
-  })
+})
 export class AppRoutingModule {}
 
 // { path: 'dashboard', canActivate: [AuthGuard], loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) },

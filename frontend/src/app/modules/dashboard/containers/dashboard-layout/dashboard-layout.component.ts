@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { HeaderComponent } from '../../../../layout/components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -6,7 +6,6 @@ import { MaterialModuale } from '../../../../shared/material/material.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { Menu } from '../../../../core/models/menu-item.model';
 import { MenuComponent } from '../../../../layout/components/menu/menu.component';
-import { MenuService } from '../../../../core/services/menu.service';
 import { MatListModule } from '@angular/material/list';
 import { PageHeaderComponent } from '../../../../layout/components/page-header/page-header.component';
 import { AuthService } from '../../../../core/services/authservice/auth.service';
@@ -34,7 +33,7 @@ export class DashboardLayoutComponent
 
   constructor(private authService: AuthService)
   {
-      console.log(this.authService.hasToken())
+     // console.log(this.authService.hasToken())
   }
   opened = true;
 
@@ -69,7 +68,5 @@ export class DashboardLayoutComponent
       ],
     },
   ];
-
-
 
 }
