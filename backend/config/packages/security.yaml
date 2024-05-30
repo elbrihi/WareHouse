@@ -6,7 +6,7 @@ security:
     providers:
         #users_in_memory: { memory: null }
         
-        api_user_providr:
+        api_user_provider:
             entity:
                 class: ChickenWarehouse\UserBundle\Domain\Entity\User
                 property: apiToken
@@ -15,6 +15,12 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        api:
+            pattern: ^/api/
+            provider: api_user_provider
+            custom_authenticator: ChickenWarehouse\UserBundle\Application\Security\Authenticator\ApiTokenAuthenticator
+            stateless: true
+            lazy: true
         main:
             lazy: true
             #provider: users_in_memory
