@@ -11,7 +11,12 @@ import { RouterModule } from '@angular/router';
   selector: 'app-menu',
   standalone: true,
   imports: [
-    RouterModule,
+    CommonModule,
+    MatListModule,
+    MatIconModule,
+    MatExpansionModule,
+    RouterModule
+    
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'

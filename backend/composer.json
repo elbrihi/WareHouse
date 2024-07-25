@@ -43,7 +43,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "ChickenWarehouse\\UserBundle\\":"lib/ChickenWarehouse/UserBundle/src/"
+            "ChickenWarehouse\\UserBundle\\":"lib/ChickenWarehouse/UserBundle/src/",
+            "ChickenWarehouse\\ProductBundle\\":"lib/ChickenWarehouse/ProductBundle/src/"
         }
     },
     "autoload-dev": {

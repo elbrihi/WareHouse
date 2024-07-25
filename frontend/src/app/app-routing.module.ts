@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { DashboardLayoutComponent } from './modules/dashboard/containers/dashboard-layout/dashboard-layout.component';
 import { LoginComponent } from './modules/auth/components/login/login.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { MenuComponent } from './layout/components/menu/menu.component';
 
 export const routes: Routes = [
     {

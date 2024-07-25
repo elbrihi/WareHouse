@@ -24,6 +24,8 @@ services:
         resource: '../lib/ChickenWarehouse/*'
         exclude: 
                - '../lib/{ChickenWarehouse/UserBundle/src/,Domain/Entity/,UI/Controller/,Resourcres/config/,ChickenWarehouseUserBundle.php}'
+               - '../lib/{ChickenWarehouse/ProductBundle/src/}'
+
 
 
 

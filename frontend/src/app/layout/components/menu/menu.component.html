@@ -1,3 +1,4 @@
+
 <mat-list>
     <ng-container *ngFor="let item of menu">
                 <!-- If the item doesn't have children show it as list item-->
@@ -8,27 +9,30 @@
                 [routerLink]="item.link"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: true }"
-            >
+              >
                 <mat-icon [style.color]="item.color" mat-list-icon>
                 {{ item.icon }}
                 </mat-icon>
                 <div mat-line>{{ item.title }}</div>
                 <mat-icon [style.color]="item.color" mat-list-icon>
                     {{ item.icon }}
-                  </mat-icon>
-                  <div mat-line>{{ item.title }}</div>
+                </mat-icon>
+                
+                <div mat-line>{{ item.title }}</div>
             </mat-list-item>
             
         </ng-container>
         <ng-container *ngIf="item.subMenu && item.subMenu.length > 0">
             <mat-expansion-panel [expanded]="item.expanded">
               <mat-expansion-panel-header>
+              
                 <mat-panel-title class="d-flex align-items-center">
                   <mat-icon [style.color]="item.color" mat-list-icon>
                     {{ item.icon }}
                   </mat-icon>
                   <span mat-line class="list-item">{{ item.title }}</span>
                 </mat-panel-title>
+
               </mat-expansion-panel-header>
               <app-menu [menu]="item.subMenu"></app-menu>
             </mat-expansion-panel>

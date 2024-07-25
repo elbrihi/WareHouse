@@ -10,6 +10,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './core/services/authservice/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModuale } from './shared/material/material.module';
+import { MenuComponent } from './layout/components/menu/menu.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { HeaderComponent } from './layout/components/header/header.component';
 
 @NgModule({
 
@@ -22,14 +25,24 @@ import { MaterialModuale } from './shared/material/material.module';
              HttpClientModule,
              MaterialModuale,
              DashboardModule,
-             AppRoutingModule
+             AppRoutingModule,
+             MatExpansionModule,
+             MenuComponent,
+
             
           ],
-  declarations: [AppComponent ], 
+  declarations: [
+    AppComponent,
+
+
+  ], 
   providers: [
     AuthService
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent,
+  
+  ],
 })
 export class AppModule {
 
