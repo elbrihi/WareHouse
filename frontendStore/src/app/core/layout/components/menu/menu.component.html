@@ -1,0 +1,29 @@
+<mat-toolbar>Menu</mat-toolbar>
+<mat-nav-list>
+  <a mat-list-item href="#">Dashboard</a>
+  <a mat-list-item href="#">Reports</a>
+  <a mat-list-item href="#">Settings</a>
+</mat-nav-list>
+<!--mat-list>
+ 
+  <ng-container *ngFor="let item of menu">
+    
+      <ng-container *ngIf="item?.subMenu === undefined">
+        <mat-list-item
+            *ngIf="item.title"
+            [routerLink]="item.link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+      
+        <mat-icon [style.color]="item.color" mat-list-icon>
+          {{ item.icon }}
+        </mat-icon>
+        <div mat-line> {{ item.title }}</div>
+        </mat-list-item>
+      </ng-container>
+  
+
+
+  </ng-container>
+</mat-list-->

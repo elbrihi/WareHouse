@@ -4,7 +4,7 @@ namespace App\DataFixtures;
 
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use ChickenWarehouse\UserBundle\Domain\Entity\User;
+use Stock\UserBundle\Domain\Entity\User;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture

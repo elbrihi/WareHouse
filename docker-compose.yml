@@ -59,10 +59,10 @@ services:
 
     node:
         build:
-            context: ./frontend
+            context: ./frontendStore
             dockerfile: Dockerfile
         ports:
             - '4200:4200'
         volumes:
-            - ./frontend:/frontend
+            - ./frontendStore:/frontendStore
  

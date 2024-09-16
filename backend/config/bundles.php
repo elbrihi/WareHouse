@@ -10,8 +10,8 @@ return [
     ApiPlatform\Symfony\Bundle\ApiPlatformBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
-    ChickenWarehouse\UserBundle\ChickenWarehouseUserBundle::class => ['all' => true],
-    ChickenWarehouse\ProductBundle\ChickenWarehouseProductBundle::class => ['all' => true],
+    Stock\UserBundle\StockUserBundle::class => ['all' => true],
+    Stock\ProductBundle\StockProductBundle::class => ['all' => true],
   
    
 ];

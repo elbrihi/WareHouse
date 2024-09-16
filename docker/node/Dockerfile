@@ -1,20 +1,19 @@
-# base image
-FROM node:12.2.0
+FROM node:19.6.0
 
-# set working directory
-WORKDIR /app
+ARG WORK_DIR=/frontend
+ENV PATH ${WORK_DIR}/node_modules/.bin:$PATH
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+RUN mkdir ${WORK_DIR}
+WORKDIR ${WORK_DIR}
 
-# install and cache app dependencies
+COPY package.json ${WORK_DIR}
+COPY package-lock.json ${WORK_DIR}
 
-COPY package.json /app/package.json
+RUN npm install -g @angular/core@16.2.4 @angular/cli@16.2.4 --force
 RUN npm install
-RUN npm install -g @angular/cli@9.0.2
 
-# add app
-COPY C:\Users\fujitsu\Desktop\Docker\dockerangular /app
+COPY . ${WORK_DIR}
 
-# start app
-CMD ng serve --host 0.0.0.0 --disable-host-check
+EXPOSE 4200
+
+CMD ng serve --host 0.0.0.0

@@ -20,11 +20,11 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
     
-    ChickenWarehouse\UserBundle\:
-        resource: '../lib/ChickenWarehouse/*'
+    Stock\UserBundle\:
+        resource: '../lib/Stock/*'
         exclude: 
-               - '../lib/{ChickenWarehouse/UserBundle/src/,Domain/Entity/,UI/Controller/,Resourcres/config/,ChickenWarehouseUserBundle.php}'
-               - '../lib/{ChickenWarehouse/ProductBundle/src/}'
+               - '../lib/{Stock/UserBundle/src/,Domain/Entity/,UI/Controller/,Resourcres/config/,StockUserBundle.php}'
+               - '../lib/{Stock/ProductBundle/src/}'
 
 
 

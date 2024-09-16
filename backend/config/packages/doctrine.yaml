@@ -23,12 +23,12 @@ doctrine:
                 prefix: 'App\Entity'
                 alias: App
             
-            ChickenWarehouseUserBundle:
+            StockUserBundle:
                 type: attribute
                 is_bundle: false
-                dir: '%kernel.project_dir%/lib/ChickenWarehouse/UserBundle/src/Domain/Entity'
-                prefix: 'ChickenWarehouse\UserBundle\Domain\Entity'
-                alias: ChickenWarehouseUserBundle
+                dir: '%kernel.project_dir%/lib/Stock/UserBundle/src/Domain/Entity'
+                prefix: 'Stock\UserBundle\Domain\Entity'
+                alias: StockUserBundle
         controller_resolver:
             auto_mapping: true
 
