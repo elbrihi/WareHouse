@@ -2,12 +2,17 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
 
 import { StoreComponent } from "./components/store.component";
 import { RouterModule } from "@angular/router";
-import { MaterialModule } from "../../core/shared/material.module";
-import { HeaderComponent } from "../../core/layout/components/header/header.component";
-import { MenuComponent } from "../../core/layout/components/menu/menu.component";
-import { MainLayoutComponent } from "../../core/layout/containers/main-layout/main-layout.component";
+import { MaterialModule } from "../../shared/material.module";
+
+
 import { CommonModule } from "@angular/common";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainLayoutComponent } from "../../layout/containers/main-layout/main-layout.component";
+import { MenuComponent } from "../../layout/components/menu/menu.component";
+import { HeaderComponent } from "../../layout/components/header/header.component";
+import { LoginComponent } from "../auth/components/login/login.component";
+import { ModelModule } from "./model.module";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -16,14 +21,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         StoreComponent,
         HeaderComponent,
         MenuComponent,
-      
-
+        LoginComponent
     ],
     imports:[
         RouterModule,
+        ModelModule,
         MaterialModule,
         CommonModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        ReactiveFormsModule
     ],
     providers:[],
     exports: [
@@ -31,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         StoreComponent,
         HeaderComponent,
         MenuComponent,
+        LoginComponent
     ],
 
 })

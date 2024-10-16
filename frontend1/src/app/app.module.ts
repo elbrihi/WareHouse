@@ -27,9 +27,7 @@ import { HeaderComponent } from './layout/components/header/header.component';
              DashboardModule,
              AppRoutingModule,
              MatExpansionModule,
-             MenuComponent,
-
-            
+             MenuComponent,           
           ],
   declarations: [
     AppComponent,

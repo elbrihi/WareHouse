@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { StoreModule } from './modules/store/store.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -15,7 +17,10 @@ import { StoreModule } from './modules/store/store.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     StoreModule,
+    BrowserAnimationsModule,
+   
     
   ],
   providers: [],
